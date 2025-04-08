@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "public": false,
   "builds": [
     {
       "src": "api/bot.js",
@@ -12,6 +11,11 @@
       "src": "/webhook",
       "dest": "/api/bot",
       "methods": ["GET", "POST"]
+    },
+    {
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/api/bot"
     }
   ]
 }
