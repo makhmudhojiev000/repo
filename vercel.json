@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "public": false,
+  "builds": [
+    {
+      "src": "api/bot.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/webhook",
+      "dest": "/api/bot",
+      "methods": ["GET", "POST"]
+    }
+  ]
+}
